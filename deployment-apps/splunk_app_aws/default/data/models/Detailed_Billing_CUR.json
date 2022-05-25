@@ -1,0 +1,218 @@
+{
+    "modelName": "Detailed_Billing_CUR",
+    "displayName": "Detailed Billing CUR",
+    "description": "",
+    "objectSummary": {
+        "Event-Based": 1,
+        "Transaction-Based": 0,
+        "Search-Based": 0
+    },
+    "objects": [
+        {
+            "objectName": "detailed_billing_cur",
+            "displayName": "detailed_billing_cur",
+            "parentName": "BaseEvent",
+            "fields": [
+                {
+                    "fieldName": "BlendedCost",
+                    "owner": "detailed_billing_cur",
+                    "type": "number",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "BlendedCost",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "Operation",
+                    "owner": "detailed_billing_cur",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Operation",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "ProductName",
+                    "owner": "detailed_billing_cur",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "ProductName",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "AvailabilityZone",
+                    "owner": "detailed_billing_cur",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "AvailabilityZone",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "InvoiceId",
+                    "owner": "detailed_billing_cur",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "InvoiceId",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "CurrencyCode",
+                    "owner": "detailed_billing_cur",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "CurrencyCode",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "BillingPeriodEndDate",
+                    "owner": "detailed_billing_cur",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "BillingPeriodEndDate",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "UnblendedCost",
+                    "owner": "detailed_billing_cur",
+                    "type": "number",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "UnblendedCost",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "_time",
+                    "owner": "BaseEvent",
+                    "type": "timestamp",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "_time",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "host",
+                    "owner": "BaseEvent",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "host",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "source",
+                    "owner": "BaseEvent",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "source",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "sourcetype",
+                    "owner": "BaseEvent",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "sourcetype",
+                    "comment": ""
+                }
+            ],
+            "calculations": [
+                {
+                    "outputFields": [
+                        {
+                            "fieldName": "LinkedAccountId",
+                            "owner": "detailed_billing_cur",
+                            "type": "string",
+                            "fieldSearch": "",
+                            "required": false,
+                            "multivalue": false,
+                            "hidden": false,
+                            "editable": true,
+                            "displayName": "LinkedAccountId",
+                            "comment": ""
+                        }
+                    ],
+                    "owner": "detailed_billing_cur",
+                    "editable": true,
+                    "comment": "",
+                    "calculationType": "Eval",
+                    "expression": "if(isnull(UsageAccountId), PayerAccountId, UsageAccountId)"
+                },
+                {
+                    "outputFields": [
+                        {
+                            "fieldName": "AssemblyId",
+                            "owner": "detailed_billing_cur",
+                            "type": "string",
+                            "fieldSearch": "",
+                            "required": false,
+                            "multivalue": false,
+                            "hidden": false,
+                            "editable": true,
+                            "displayName": "AssemblyId",
+                            "comment": ""
+                        }
+                    ],
+                    "inputField": "source",
+                    "owner": "detailed_billing_cur",
+                    "editable": true,
+                    "comment": "",
+                    "calculationType": "Rex",
+                    "expression": "\\d{8}-\\d{8}\\/(?<AssemblyId>.*)\\/"
+                }
+            ],
+            "constraints": [
+                {
+                    "search": "`aws-billing-details-cur(\"*\")` ",
+                    "owner": "detailed_billing_cur"
+                }
+            ],
+            "lineage": "detailed_billing_cur"
+        }
+    ],
+    "objectNameList": [
+        "detailed_billing_cur"
+    ]
+}

@@ -1,0 +1,79 @@
+subject,category
+Backdoor:EC2/C&CActivity.B,Command and Control Communication
+Backdoor:EC2/C&CActivity.B!DNS,Command and Control Communication
+Backdoor:EC2/DenialOfService.Dns,Denial of Service
+Backdoor:EC2/DenialOfService.Tcp,Denial of Service
+Backdoor:EC2/DenialOfService.Udp,Denial of Service
+Backdoor:EC2/DenialOfService.UdpOnTcpPorts,Denial of Service
+Backdoor:EC2/DenialOfService.UnusualProtocol,Denial of Service
+Backdoor:EC2/Spambot,Backdoor
+Behavior:EC2/NetworkPortUnusual,Unusual Communication
+Behavior:EC2/TrafficVolumeUnusual,Unusual Communication
+CredentialAccess:IAMUser/AnomalousBehavior,CredentialAccess
+CryptoCurrency:EC2/BitcoinTool.B,CryptoCurrency
+CryptoCurrency:EC2/BitcoinTool.B!DNS,CryptoCurrency
+DefenseEvasion:IAMUser/AnomalousBehavior,DefenseEvasion
+Discovery:IAMUser/AnomalousBehavior,Discovery
+Discovery:S3/MaliciousIPCaller,Discovery
+Discovery:S3/MaliciousIPCaller.Custom,Discovery
+Discovery:S3/TorIPCaller,Discovery
+Exfiltration:IAMUser/AnomalousBehavior,Exfiltration
+Exfiltration:S3/MaliciousIPCaller,Exfiltration
+Exfiltration:S3/ObjectRead.Unusual,Exfiltration
+Impact:EC2/AbusedDomainRequest.Reputation,Risky Communication
+Impact:EC2/BitcoinDomainRequest.Reputation,Risky Communication
+Impact:EC2/MaliciousDomainRequest.Reputation,Risky Communication
+Impact:EC2/PortSweep,Risky Communication
+Impact:EC2/SuspiciousDomainRequest.Reputation,Risky Communication
+Impact:EC2/WinRMBruteForce,BruteForce
+Impact:IAMUser/AnomalousBehavior,Anomalous user behavior
+Impact:S3/MaliciousIPCaller,Risky Communication
+InitialAccess:IAMUser/AnomalousBehavior,UnauthorizedAccess
+PenTest:IAMUser/KaliLinux,PenTest
+PenTest:IAMUser/ParrotLinux,PenTest
+PenTest:IAMUser/PentooLinux,PenTest
+PenTest:S3/KaliLinux,PenTest
+PenTest:S3/ParrotLinux,PenTest
+PenTest:S3/PentooLinux,PenTest
+Persistence:IAMUser/AnomalousBehavior,Risky Communication
+Policy:IAMUser/RootCredentialUsage,Policy
+Policy:S3/AccountBlockPublicAccessDisabled,Policy
+Policy:S3/BucketAnonymousAccessGranted,Policy
+Policy:S3/BucketBlockPublicAccessDisabled,Policy
+Policy:S3/BucketPublicAccessGranted,Policy
+PrivilegeEscalation:IAMUser/AnomalousBehavior,PrivilegeEscalation
+Recon:EC2/PortProbeEMRUnprotectedPort,Recon
+Recon:EC2/PortProbeUnprotectedPort,Recon
+Recon:EC2/Portscan,Recon
+Recon:IAMUser/MaliciousIPCaller,Recon
+Recon:IAMUser/MaliciousIPCaller.Custom,Recon
+Recon:IAMUser/TorIPCaller,Recon
+Stealth:IAMUser/CloudTrailLoggingDisabled,Stelth
+Stealth:IAMUser/PasswordPolicyChange,Stelth
+Stealth:S3/ServerAccessLoggingDisabled,Stelth
+Trojan:EC2/BlackholeTraffic,Trojan
+Trojan:EC2/BlackholeTraffic!DNS,Trojan
+Trojan:EC2/DGADomainRequest.B,Trojan
+Trojan:EC2/DGADomainRequest.C!DNS,Trojan
+Trojan:EC2/DNSDataExfiltration,Trojan
+Trojan:EC2/DriveBySourceTraffic!DNS,Trojan
+Trojan:EC2/DropPoint,Trojan
+Trojan:EC2/DropPoint!DNS,Trojan
+Trojan:EC2/PhishingDomainRequest!DNS,Trojan
+UnauthorizedAccess:EC2/MaliciousIPCaller.Custom,UnauthorizedAccess
+UnauthorizedAccess:EC2/MetadataDNSRebind,UnauthorizedAccess
+UnauthorizedAccess:EC2/RDPBruteForce,BruteForce
+UnauthorizedAccess:EC2/SSHBruteForce,BruteForce
+UnauthorizedAccess:EC2/TorClient,UnauthorizedAccess
+UnauthorizedAccess:EC2/TorRelay,UnauthorizedAccess
+UnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,UnauthorizedAccess
+UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration,UnauthorizedAccess
+UnauthorizedAccess:IAMUser/MaliciousIPCaller,UnauthorizedAccess
+UnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,UnauthorizedAccess
+UnauthorizedAccess:IAMUser/TorIPCaller,UnauthorizedAccess
+UnauthorizedAccess:S3/MaliciousIPCaller.Custom,UnauthorizedAccess
+UnauthorizedAccess:S3/TorIPCaller,UnauthorizedAccess
+Persistence:IAMUser/UserPermissions,CredentialAccess
+PrivilegeEscalation:IAMUser/AdministrativePermissions,PrivilegeEscalation
+Impact:S3/PermissionsModification.Unusual,PrivilegeEscalation
+Impact:S3/ObjectDelete.Unusual,Unusual Communication

@@ -1,0 +1,2 @@
+import{_ as e,a as n}from"./_rollupPluginBabelHelpers-deef47fd.js";var t=new(function(){function t(){n(this,t)}return e(t,[{key:"getField",value:function(e,n,t){return r(e,n).entity.find((function(e){return e.field===t}))}},{key:"getComponent",value:function(e,n){return i(e).find((function(e){return e.name===n}))}},{key:"getServices",value:function(e){return e.pages.inputs.services}}]),t}());t.getField;var r=t.getComponent,i=t.getServices;export{i as a,r as g};
+//# sourceMappingURL=GlobalConfigUtil-2d540963.js.map
