@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: validate-aws-sns-message
+Version: 0.9.0
+Summary: Validate integrity of Amazon SNS messages (Refined)
+Home-page: https://github.com/kenichi-ogawa-1988/validate_aws_sns_message
+Author: Ken'ichi Ogawa
+Author-email: kenichi@ogwk.net
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Description-Content-Type: text/markdown
+Requires-Dist: cffi
+Requires-Dist: oscrypto
+Requires-Dist: six
+
+# validate_aws_sns_message
+
+Validate integrity of Amazon SNS messages.
+
+Refined from `validatesns`.
+
+* Verifies cryptographic signature.
+* Checks signing certificate is hosted on an Amazon-controlled URL.
+* Requires message be no older than one hour, the maximum lifetime of an SNS message.
+
+Licence: [MIT](https://opensource.org/licenses/MIT)
+
+## Quick start
+
+```shell
+
+pip install validate_aws_sns_message
+
+```
+
+```python
+
+import validate_aws_sns_message
+
+# Raise validate_aws_sns_message.ValidationError if message is invalid.
+validate_aws_sns_message.validate(decoded_json_message_from_sns)
+
+```
+
+## Gotchas
+
+The ``validate`` function downloads the signing certificate on every call. For performance reasons, it's worth caching certificates - you can do this by passing in a ``get_certificate`` function.
+
+This takes a ``url``, and returns the certificate content. Your function could cache to the filesystem, a database, or wherever makes sense.
+
+## Contribute
+
+Github: <https://github.com/kenichi-ogawa-1988/validate_aws_sns_message>
+
+## Special thanks
+
+* Original `validatesns`: <https://github.com/nathforge/validatesns>
+
+

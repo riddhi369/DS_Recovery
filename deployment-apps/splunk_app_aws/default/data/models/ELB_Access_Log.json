@@ -1,0 +1,359 @@
+{
+  "modelName": "ELB_Access_Log",
+  "displayName": "ELB Access Log",
+  "description": "",
+  "objectSummary": {
+    "Event-Based": 1,
+    "Transaction-Based": 0,
+    "Search-Based": 0
+  },
+  "objects": [
+    {
+      "objectName": "elb_access_log",
+      "displayName": "elb_access_log",
+      "parentName": "BaseEvent",
+      "comment": "",
+      "fields": [
+        {
+          "fieldName": "elb",
+          "owner": "elb_access_log",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "elb",
+          "comment": ""
+        },
+        {
+          "fieldName": "backend_processing_time",
+          "owner": "elb_access_log",
+          "type": "number",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "backend_processing_time",
+          "comment": ""
+        },
+        {
+          "fieldName": "backend_status_code",
+          "owner": "elb_access_log",
+          "type": "number",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "backend_status_code",
+          "comment": ""
+        },
+        {
+          "fieldName": "client_ip",
+          "owner": "elb_access_log",
+          "type": "ipv4",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "client_ip",
+          "comment": ""
+        },
+        {
+          "fieldName": "elb_status_code",
+          "owner": "elb_access_log",
+          "type": "number",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "elb_status_code",
+          "comment": ""
+        },
+        {
+          "fieldName": "received_bytes",
+          "owner": "elb_access_log",
+          "type": "number",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "received_bytes",
+          "comment": ""
+        },
+        {
+          "fieldName": "request",
+          "owner": "elb_access_log",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "request",
+          "comment": ""
+        },
+        {
+          "fieldName": "request_processing_time",
+          "owner": "elb_access_log",
+          "type": "number",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "request_processing_time",
+          "comment": ""
+        },
+        {
+          "fieldName": "response_processing_time",
+          "owner": "elb_access_log",
+          "type": "number",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "response_processing_time",
+          "comment": ""
+        },
+        {
+          "fieldName": "sent_bytes",
+          "owner": "elb_access_log",
+          "type": "number",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "sent_bytes",
+          "comment": ""
+        },
+        {
+          "fieldName": "_time",
+          "owner": "BaseEvent",
+          "type": "timestamp",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "_time",
+          "comment": ""
+        },
+        {
+          "fieldName": "host",
+          "owner": "BaseEvent",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "host",
+          "comment": ""
+        },
+        {
+          "fieldName": "source",
+          "owner": "BaseEvent",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "source",
+          "comment": ""
+        },
+        {
+          "fieldName": "sourcetype",
+          "owner": "BaseEvent",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "sourcetype",
+          "comment": ""
+        }
+      ],
+      "calculations": [
+        {
+          "outputFields": [
+            {
+              "fieldName": "backend_processing_time",
+              "owner": "elb_access_log",
+              "type": "string",
+              "fieldSearch": "",
+              "required": false,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "backend_processing_time",
+              "comment": ""
+            }
+          ],
+          "owner": "elb_access_log",
+          "editable": true,
+          "comment": "",
+          "calculationType": "Eval",
+          "expression": "if(isnull(backend_processing_time), target_processing_time, backend_processing_time)"
+        },
+        {
+          "outputFields": [
+            {
+              "fieldName": "backend_status_code",
+              "owner": "elb_access_log",
+              "type": "string",
+              "fieldSearch": "",
+              "required": false,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "backend_status_code",
+              "comment": ""
+            }
+          ],
+          "owner": "elb_access_log",
+          "editable": true,
+          "comment": "",
+          "calculationType": "Eval",
+          "expression": "if(isnull(backend_status_code), target_status_code, backend_status_code)"
+        },
+        {
+          "outputFields": [
+            {
+              "fieldName": "alb_name",
+              "owner": "elb_access_log",
+              "type": "string",
+              "fieldSearch": "",
+              "required": false,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "ALBName",
+              "comment": ""
+            }
+          ],
+          "inputField": "elb",
+          "owner": "elb_access_log",
+          "editable": true,
+          "comment": "",
+          "calculationType": "Rex",
+          "expression": "app\/(?<alb_name>.*?)\/"
+        },
+        {
+          "outputFields": [
+            {
+              "fieldName": "elb",
+              "owner": "elb_access_log",
+              "type": "string",
+              "fieldSearch": "",
+              "required": false,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "elb",
+              "comment": ""
+            }
+          ],
+          "owner": "elb_access_log",
+          "editable": true,
+          "comment": "",
+          "calculationType": "Eval",
+          "expression": "if(isnull(type), elb, alb_name)"
+        },
+        {
+          "outputFields": [
+            {
+              "fieldName": "client_ip_lon",
+              "owner": "elb_access_log",
+              "type": "number",
+              "fieldSearch": "client_ip_lon=*",
+              "required": true,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "Lon",
+              "comment": "",
+              "lookupOutputFieldName": "lon"
+            },
+            {
+              "fieldName": "client_ip_lat",
+              "owner": "elb_access_log",
+              "type": "number",
+              "fieldSearch": "client_ip_lat=*",
+              "required": true,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "Lat",
+              "comment": "",
+              "lookupOutputFieldName": "lat"
+            },
+            {
+              "fieldName": "client_ip_City",
+              "owner": "elb_access_log",
+              "type": "string",
+              "fieldSearch": "client_ip_City=*",
+              "required": true,
+              "multivalue": false,
+              "hidden": true,
+              "editable": true,
+              "displayName": "client_ip_City",
+              "comment": "",
+              "lookupOutputFieldName": "City"
+            },
+            {
+              "fieldName": "client_ip_Region",
+              "owner": "elb_access_log",
+              "type": "string",
+              "fieldSearch": "client_ip_Region=*",
+              "required": true,
+              "multivalue": false,
+              "hidden": true,
+              "editable": true,
+              "displayName": "client_ip_Region",
+              "comment": "",
+              "lookupOutputFieldName": "Region"
+            },
+            {
+              "fieldName": "client_ip_Country",
+              "owner": "elb_access_log",
+              "type": "string",
+              "fieldSearch": "client_ip_Country=*",
+              "required": true,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "Country",
+              "comment": "",
+              "lookupOutputFieldName": "Country"
+            }
+          ],
+          "inputField": "client_ip",
+          "calculationType": "GeoIP",
+          "comment": "",
+          "owner": "elb_access_log",
+          "editable": true
+        }
+      ],
+      "constraints": [
+        {
+          "search": "`aws-accesslog-sourcetype(\"elb\")`",
+          "owner": "elb_access_log"
+        }
+      ],
+      "lineage": "elb_access_log"
+    }
+  ],
+  "objectNameList": [
+    "elb_access_log"
+  ]
+}

@@ -1,0 +1,258 @@
+protocol_code,protocol,transport,protocol_full_name
+-1,unknown,unknown,unknown
+0,HOPOPT,HOPOPT,IPv6 Hop-by-Hop Option
+1,ICMP,ICMP,Internet Control Message
+2,IGMP,IGMP,Internet Group Management
+3,GGP,GGP,Gateway-to-Gateway
+4,IPv4,IPv4,IPv4 encapsulation
+5,ST,ST,Stream
+6,IP,TCP,Transmission Control
+7,CBT,CBT,CBT
+8,EGP,EGP,Exterior Gateway Protocol
+9,IGP,IGP,any private interior gateway (used by Cisco for their IGRP)
+10,BBN-RCC-MON,BBN-RCC-MON,BBN RCC Monitoring
+11,NVP-II,NVP-II,Network Voice Protocol
+12,PUP,PUP,PUP
+13,ARGUS,ARGUS,ARGUS
+14,EMCON,EMCON,EMCON
+15,XNET,XNET,Cross Net Debugger
+16,CHAOS,CHAOS,Chaos
+17,UDP,UDP,User Datagram
+18,MUX,MUX,Multiplexing
+19,DCN-MEAS,DCN-MEAS,DCN Measurement Subsystems
+20,HMP,HMP,Host Monitoring
+21,PRM,PRM,Packet Radio Measurement
+22,XNS-IDP,XNS-IDP,XEROX NS IDP
+23,TRUNK-1,TRUNK-1,Trunk-1
+24,TRUNK-2,TRUNK-2,Trunk-2
+25,LEAF-1,LEAF-1,Leaf-1
+26,LEAF-2,LEAF-2,Leaf-2
+27,RDP,RDP,Reliable Data Protocol
+28,IRTP,IRTP,Internet Reliable Transaction
+29,ISO-TP4,ISO-TP4,ISO Transport Protocol Class 4
+30,NETBLT,NETBLT,Bulk Data Transfer Protocol
+31,MFE-NSP,MFE-NSP,MFE Network Services Protocol
+32,MERIT-INP,MERIT-INP,MERIT Internodal Protocol
+33,DCCP,DCCP,Datagram Congestion Control Protocol
+34,3PC,3PC,Third Party Connect Protocol
+35,IDPR,IDPR,Inter-Domain Policy Routing Protocol
+36,XTP,XTP,XTP
+37,DDP,DDP,Datagram Delivery Protocol
+38,IDPR-CMTP,IDPR-CMTP,IDPR Control Message Transport Proto
+39,TP++,TP++,TP++ Transport Protocol
+40,IL,IL,IL Transport Protocol
+41,IPv6,IPv6,IPv6 encapsulation
+42,SDRP,SDRP,Source Demand Routing Protocol
+43,IPv6-Route,IPv6-Route,Routing Header for IPv6
+44,IPv6-Frag,IPv6-Frag,Fragment Header for IPv6
+45,IDRP,IDRP,Inter-Domain Routing Protocol
+46,RSVP,RSVP,Reservation Protocol
+47,GRE,GRE,Generic Routing Encapsulation
+48,DSR,DSR,Dynamic Source Routing Protocol
+49,BNA,BNA,BNA
+50,ESP,ESP,Encap Security Payload
+51,AH,AH,Authentication Header
+52,I-NLSP,I-NLSP,Integrated Net Layer Security TUBA
+53,SWIPE (deprecated),SWIPE (deprecated),IP with Encryption
+54,NARP,NARP,NBMA Address Resolution Protocol
+55,MOBILE,MOBILE,IP Mobility
+56,TLSP,TLSP,Transport Layer Security Protocol using Kryptonet key management
+57,SKIP,SKIP,SKIP
+58,IPv6-ICMP,IPv6-ICMP,ICMP for IPv6
+59,IPv6-NoNxt,IPv6-NoNxt,No Next Header for IPv6
+60,IPv6-Opts,IPv6-Opts,Destination Options for IPv6
+61,None,None,any host internal protocol
+62,CFTP,CFTP,CFTP
+63,None,None,any local network
+64,SAT-EXPAK,SAT-EXPAK,SATNET and Backroom EXPAK
+65,KRYPTOLAN,KRYPTOLAN,Kryptolan
+66,RVD,RVD,MIT Remote Virtual Disk Protocol
+67,IPPC,IPPC,Internet Pluribus Packet Core
+68,None,None,any distributed file system
+69,SAT-MON,SAT-MON,SATNET Monitoring
+70,VISA,VISA,VISA Protocol
+71,IPCV,IPCV,Internet Packet Core Utility
+72,CPNX,CPNX,Computer Protocol Network Executive
+73,CPHB,CPHB,Computer Protocol Heart Beat
+74,WSN,WSN,Wang Span Network
+75,PVP,PVP,Packet Video Protocol
+76,BR-SAT-MON,BR-SAT-MON,Backroom SATNET Monitoring
+77,SUN-ND,SUN-ND,SUN ND PROTOCOL-Temporary
+78,WB-MON,WB-MON,WIDEBAND Monitoring
+79,WB-EXPAK,WB-EXPAK,WIDEBAND EXPAK
+80,ISO-IP,ISO-IP,ISO Internet Protocol
+81,VMTP,VMTP,VMTP
+82,SECURE-VMTP,SECURE-VMTP,SECURE-VMTP
+83,VINES,VINES,VINES
+84,IPTM,IPTM,Internet Protocol Traffic Manager
+85,NSFNET-IGP,NSFNET-IGP,NSFNET-IGP
+86,DGP,DGP,Dissimilar Gateway Protocol
+87,TCF,TCF,TCF
+88,EIGRP,EIGRP,EIGRP
+89,OSPFIGP,OSPFIGP,OSPFIGP
+90,Sprite-RPC,Sprite-RPC,Sprite RPC Protocol
+91,LARP,LARP,Locus Address Resolution Protocol
+92,MTP,MTP,Multicast Transport Protocol
+93,AX.25,AX.25,AX.25 Frames
+94,IPIP,IPIP,IP-within-IP Encapsulation Protocol
+95,MICP (deprecated),MICP (deprecated),Mobile Internetworking Control Pro.
+96,SCC-SP,SCC-SP,Semaphore Communications Sec. Pro.
+97,ETHERIP,ETHERIP,Ethernet-within-IP Encapsulation
+98,ENCAP,ENCAP,Encapsulation Header
+99,None,None,any private encryption scheme
+100,GMTP,GMTP,GMTP
+101,IFMP,IFMP,Ipsilon Flow Management Protocol
+102,PNNI,PNNI,PNNI over IP
+103,PIM,PIM,Protocol Independent Multicast
+104,ARIS,ARIS,ARIS
+105,SCPS,SCPS,SCPS
+106,QNX,QNX,QNX
+107,A/N,A/N,Active Networks
+108,IPComp,IPComp,IP Payload Compression Protocol
+109,SNP,SNP,Sitara Networks Protocol
+110,Compaq-Peer,Compaq-Peer,Compaq Peer Protocol
+111,IPX-in-IP,IPX-in-IP,IPX in IP
+112,VRRP,VRRP,Virtual Router Redundancy Protocol
+113,PGM,PGM,PGM Reliable Transport Protocol
+114,None,None,any 0-hop protocol
+115,L2TP,L2TP,Layer Two Tunneling Protocol
+116,DDX,DDX,D-II Data Exchange (DDX)
+117,IATP,IATP,Interactive Agent Transfer Protocol
+118,STP,STP,Schedule Transfer Protocol
+119,SRP,SRP,SpectraLink Radio Protocol
+120,UTI,UTI,UTI
+121,SMP,SMP,Simple Message Protocol
+122,SM (deprecated),SM (deprecated),Simple Multicast Protocol
+123,PTP,PTP,Performance Transparency Protocol
+124,ISIS over IPv4,ISIS over IPv4,
+125,FIRE,FIRE,
+126,CRTP,CRTP,Combat Radio Transport Protocol
+127,CRUDP,CRUDP,Combat Radio User Datagram
+128,SSCOPMCE,SSCOPMCE,
+129,IPLT,IPLT,
+130,SPS,SPS,Secure Packet Shield
+131,PIPE,PIPE,Private IP Encapsulation within IP
+132,SCTP,SCTP,Stream Control Transmission Protocol
+133,FC,FC,Fibre Channel
+134,RSVP-E2E-IGNORE,RSVP-E2E-IGNORE,
+135,Mobility Header,Mobility Header,
+136,UDPLite,UDPLite,
+137,MPLS-in-IP,MPLS-in-IP,
+138,manet,manet,MANET Protocols
+139,HIP,HIP,Host Identity Protocol
+140,Shim6,Shim6,Shim6 Protocol
+141,WESP,WESP,Wrapped Encapsulating Security Payload
+142,ROHC,ROHC,Robust Header Compression
+143,Unassigned,Unassigned,Unassigned
+144,Unassigned,Unassigned,Unassigned
+145,Unassigned,Unassigned,Unassigned
+146,Unassigned,Unassigned,Unassigned
+147,Unassigned,Unassigned,Unassigned
+148,Unassigned,Unassigned,Unassigned
+149,Unassigned,Unassigned,Unassigned
+150,Unassigned,Unassigned,Unassigned
+151,Unassigned,Unassigned,Unassigned
+152,Unassigned,Unassigned,Unassigned
+153,Unassigned,Unassigned,Unassigned
+154,Unassigned,Unassigned,Unassigned
+155,Unassigned,Unassigned,Unassigned
+156,Unassigned,Unassigned,Unassigned
+157,Unassigned,Unassigned,Unassigned
+158,Unassigned,Unassigned,Unassigned
+159,Unassigned,Unassigned,Unassigned
+160,Unassigned,Unassigned,Unassigned
+161,Unassigned,Unassigned,Unassigned
+162,Unassigned,Unassigned,Unassigned
+163,Unassigned,Unassigned,Unassigned
+164,Unassigned,Unassigned,Unassigned
+165,Unassigned,Unassigned,Unassigned
+166,Unassigned,Unassigned,Unassigned
+167,Unassigned,Unassigned,Unassigned
+168,Unassigned,Unassigned,Unassigned
+169,Unassigned,Unassigned,Unassigned
+170,Unassigned,Unassigned,Unassigned
+171,Unassigned,Unassigned,Unassigned
+172,Unassigned,Unassigned,Unassigned
+173,Unassigned,Unassigned,Unassigned
+174,Unassigned,Unassigned,Unassigned
+175,Unassigned,Unassigned,Unassigned
+176,Unassigned,Unassigned,Unassigned
+177,Unassigned,Unassigned,Unassigned
+178,Unassigned,Unassigned,Unassigned
+179,Unassigned,Unassigned,Unassigned
+180,Unassigned,Unassigned,Unassigned
+181,Unassigned,Unassigned,Unassigned
+182,Unassigned,Unassigned,Unassigned
+183,Unassigned,Unassigned,Unassigned
+184,Unassigned,Unassigned,Unassigned
+185,Unassigned,Unassigned,Unassigned
+186,Unassigned,Unassigned,Unassigned
+187,Unassigned,Unassigned,Unassigned
+188,Unassigned,Unassigned,Unassigned
+189,Unassigned,Unassigned,Unassigned
+190,Unassigned,Unassigned,Unassigned
+191,Unassigned,Unassigned,Unassigned
+192,Unassigned,Unassigned,Unassigned
+193,Unassigned,Unassigned,Unassigned
+194,Unassigned,Unassigned,Unassigned
+195,Unassigned,Unassigned,Unassigned
+196,Unassigned,Unassigned,Unassigned
+197,Unassigned,Unassigned,Unassigned
+198,Unassigned,Unassigned,Unassigned
+199,Unassigned,Unassigned,Unassigned
+200,Unassigned,Unassigned,Unassigned
+201,Unassigned,Unassigned,Unassigned
+202,Unassigned,Unassigned,Unassigned
+203,Unassigned,Unassigned,Unassigned
+204,Unassigned,Unassigned,Unassigned
+205,Unassigned,Unassigned,Unassigned
+206,Unassigned,Unassigned,Unassigned
+207,Unassigned,Unassigned,Unassigned
+208,Unassigned,Unassigned,Unassigned
+209,Unassigned,Unassigned,Unassigned
+210,Unassigned,Unassigned,Unassigned
+211,Unassigned,Unassigned,Unassigned
+212,Unassigned,Unassigned,Unassigned
+213,Unassigned,Unassigned,Unassigned
+214,Unassigned,Unassigned,Unassigned
+215,Unassigned,Unassigned,Unassigned
+216,Unassigned,Unassigned,Unassigned
+217,Unassigned,Unassigned,Unassigned
+218,Unassigned,Unassigned,Unassigned
+219,Unassigned,Unassigned,Unassigned
+220,Unassigned,Unassigned,Unassigned
+221,Unassigned,Unassigned,Unassigned
+222,Unassigned,Unassigned,Unassigned
+223,Unassigned,Unassigned,Unassigned
+224,Unassigned,Unassigned,Unassigned
+225,Unassigned,Unassigned,Unassigned
+226,Unassigned,Unassigned,Unassigned
+227,Unassigned,Unassigned,Unassigned
+228,Unassigned,Unassigned,Unassigned
+229,Unassigned,Unassigned,Unassigned
+230,Unassigned,Unassigned,Unassigned
+231,Unassigned,Unassigned,Unassigned
+232,Unassigned,Unassigned,Unassigned
+233,Unassigned,Unassigned,Unassigned
+234,Unassigned,Unassigned,Unassigned
+235,Unassigned,Unassigned,Unassigned
+236,Unassigned,Unassigned,Unassigned
+237,Unassigned,Unassigned,Unassigned
+238,Unassigned,Unassigned,Unassigned
+239,Unassigned,Unassigned,Unassigned
+240,Unassigned,Unassigned,Unassigned
+241,Unassigned,Unassigned,Unassigned
+242,Unassigned,Unassigned,Unassigned
+243,Unassigned,Unassigned,Unassigned
+244,Unassigned,Unassigned,Unassigned
+245,Unassigned,Unassigned,Unassigned
+246,Unassigned,Unassigned,Unassigned
+247,Unassigned,Unassigned,Unassigned
+248,Unassigned,Unassigned,Unassigned
+249,Unassigned,Unassigned,Unassigned
+250,Unassigned,Unassigned,Unassigned
+251,Unassigned,Unassigned,Unassigned
+252,Unassigned,Unassigned,Unassigned
+253,None,None,Use for experimentation and testing
+254,None,None,Use for experimentation and testing
+255,Reserved,Reserved,Reserved
